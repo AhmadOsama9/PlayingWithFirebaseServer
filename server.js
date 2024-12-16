@@ -57,6 +57,8 @@ app.post('/channels/:name/unsubscribe', async (req, res) => {
   const { name } = req.params;
   const { token } = req.body;
 
+  console.log("unsubscribing from channel", name);
+
   try {
     const subscriptionRef = db.collection('subscriptions').doc(token);
 
