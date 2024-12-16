@@ -9,7 +9,7 @@ require('dotenv').config();
 
 // Initialize Express
 const app = express();
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 
 const { route } = require('./routes/chat');
