@@ -9,7 +9,11 @@ require('dotenv').config();
 
 // Initialize Express
 const app = express();
-// app.use(cors());
+const corsOptions = {
+  origin: 'https://playingwithfirebase.onrender.com',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 const { route } = require('./routes/chat');
